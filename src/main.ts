@@ -2,6 +2,8 @@ import { NestFactory } from '@nestjs/core'
 
 import { AppModule } from './app.module.js'
 
+import { env } from './common/env.js'
+
 const app = await NestFactory.create(AppModule, {
   cors: {
     origin: '*',
@@ -11,4 +13,4 @@ const app = await NestFactory.create(AppModule, {
 
 app.enableVersioning()
 
-app.listen(7000, '0.0.0.0')
+app.listen(env.PORT, '0.0.0.0')
