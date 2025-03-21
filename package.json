@@ -1,0 +1,43 @@
+{
+  "name": "ghostspay-backend",
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "dotenv -e .env.development -- nest start --watch",
+    "build": "nest build",
+    "start": "node dist/main.js",
+    "lint": "eslint .",
+    "test": "jest --passWithNoTests",
+    "test:watch": "jest --passWithNoTests --watch",
+    "test:ci": "jest --passWithNoTests --ci",
+    "test:coverage": "jest --passWithNoTests --coverage",
+    "generate": "drizzle-kit generate",
+    "migrate": "dotenv -e .env.development -- drizzle-kit migrate",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "@nestjs/common": "^11.0.12",
+    "@nestjs/core": "^11.0.12",
+    "@nestjs/platform-express": "^11.0.12"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.8.0",
+    "@commitlint/config-conventional": "^19.8.0",
+    "@eslint/js": "^9.22.0",
+    "@jest/globals": "^29.7.0",
+    "@nestjs/cli": "^11.0.5",
+    "@swc/cli": "^0.6.0",
+    "@swc/core": "^1.11.11",
+    "@swc/jest": "^0.2.37",
+    "@types/node": "^22.13.10",
+    "dotenv-cli": "^8.0.0",
+    "eslint": "^9.22.0",
+    "eslint-plugin-jest": "^28.11.0",
+    "eslint-plugin-prettier": "^5.2.3",
+    "globals": "^16.0.0",
+    "husky": "^9.1.7",
+    "jest": "^29.7.0",
+    "prettier": "^3.5.3",
+    "typescript-eslint": "^8.26.1"
+  }
+}
