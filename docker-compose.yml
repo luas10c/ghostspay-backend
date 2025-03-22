@@ -1,0 +1,7 @@
+services:
+  postgresql:
+    image: bitnami/postgresql:latest
+    environment:
+      - ALLOW_EMPTY_PASSWORD=true
+    ports:
+      - 5432:5432
