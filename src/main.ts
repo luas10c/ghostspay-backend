@@ -80,16 +80,12 @@ const content = createDocument({
         }
       }
     },
-    '/payment/aprove': {
+    '/payment/:paymentId/approve': {
       post: {
-        requestBody: {
-          content: {
-            'application/json': {
-              schema: z.object({
-                transactionId: z.string()
-              })
-            }
-          }
+        requestParams: {
+          path: z.object({
+            paymentId: z.string()
+          })
         },
         responses: {
           '204': {
@@ -105,6 +101,9 @@ app.use(
   '/docs',
   apiReference({
     theme: 'purple',
+    metaData: {
+      title: 'GhostsPay'
+    },
     content
   })
 )
