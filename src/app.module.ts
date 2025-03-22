@@ -1,6 +1,15 @@
 import { Module } from '@nestjs/common'
 
+import { database } from './database/drizzle.js'
+
+import { CheckoutModule } from './checkout/checkout.module.js'
+import { PaymentModule } from './payment/payment.module.js'
+
 @Module({
-  imports: []
+  imports: [CheckoutModule, PaymentModule]
 })
-export class AppModule {}
+export class AppModule {
+  async onModuleInit() {
+    await database.execute('SELECT 1=1')
+  }
+}
