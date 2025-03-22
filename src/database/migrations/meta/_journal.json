@@ -1,0 +1,20 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1742423989134,
+      "tag": "20250319223949_create_table_customers",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1742557766771,
+      "tag": "20250321114926_create_table_payments",
+      "breakpoints": true
+    }
+  ]
+}
